@@ -16,5 +16,5 @@ spec:
         app: worker
     spec:
       containers:
-      - image: 950274644703.dkr.ecr.ap-northeast-2.amazonaws.com/ecr:worker
+      - image: 950274644703.dkr.ecr.ap-northeast-2.amazonaws.com/voting-app-repo:worker
         name: worker
