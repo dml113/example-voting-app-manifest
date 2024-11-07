@@ -17,7 +17,15 @@ spec:
     spec:
       containers:
       - image: 950274644703.dkr.ecr.ap-northeast-2.amazonaws.com/voting-app-repo:vote
+        imagePullPolicy: Always
         name: vote
         ports:
         - containerPort: 80
           name: vote
+        resources:
+          limits:
+            cpu: 300m
+            memory: 500Mi
+          requests:
+            cpu: 300m
+            memory: 500Mi
