@@ -17,4 +17,5 @@ spec:
     spec:
       containers:
       - image: 950274644703.dkr.ecr.ap-northeast-2.amazonaws.com/voting-app-repo:worker
+        imagePullPolicy: Always
         name: worker
