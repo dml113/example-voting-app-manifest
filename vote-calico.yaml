@@ -1,0 +1,22 @@
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  namespace: frontend
+  name: vote-ingress-calico
+spec:
+  podSelector:
+    matchLabels:
+      app: vote
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              kubernetes.io/metadata.name: istio-system
+          podSelector:
+            matchLabels:
+              app: istio-ingressgateway
+      ports:
+        - protocol: TCP
+          port: 80
