@@ -18,7 +18,7 @@ io.on('connection', function (socket) {
 });
 
 var pool = new Pool({
-  connectionString: 'postgres://postgres:postgres@db.default.svc.cluster.local/postgres'
+  connectionString: 'postgres://postgres:postgres@db.db.svc.cluster.local/postgres'
 });
 
 async.retry(
